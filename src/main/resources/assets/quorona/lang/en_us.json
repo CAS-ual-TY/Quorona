@@ -1,0 +1,8 @@
+{
+    "item.minecraft.potion.effect.quorona": "Potion of Quorona",
+    "item.minecraft.splash_potion.effect.quorona": "Splash Potion of Quorona",
+    "item.minecraft.lingering_potion.effect.quorona": "Lingering Potion of Quorona",
+    "effect.quorona.quorona": "Quorona",
+	"effect.quorona.immunity": "Immunity",
+	"item.quorona.dead_bat": "Dead Bat"
+}
