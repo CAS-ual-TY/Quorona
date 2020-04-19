@@ -19,7 +19,7 @@ public class QuoronaPotions
     public static final Potion THE_FLOO = null;
     public static final Potion LONG_THE_FLOO = null;
     public static final Potion STRONG_THE_FLOO = null;
-    public static final Potion SHORT_THEF_LOO = null;
+    public static final Potion SHORT_THE_FLOO = null;
     
     @SubscribeEvent
     public static void register(RegistryEvent.Register<Potion> event)
