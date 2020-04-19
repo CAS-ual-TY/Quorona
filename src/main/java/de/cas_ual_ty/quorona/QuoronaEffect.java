@@ -44,7 +44,7 @@ public class QuoronaEffect extends Effect
                 
                 if(!target.isPotionActive(QuoronaEffects.IMMUNITY) && !target.isPotionActive(this) && !target.isEntityUndead())
                 {
-                    target.addPotionEffect(new EffectInstance(this, Quorona.DEFAULT_QUORONA_TIME, 0, false, false));
+                    target.addPotionEffect(new EffectInstance(this, Quorona.DEFAULT_THE_FLOO_TIME, 0, false, false));
                 }
             }
         }

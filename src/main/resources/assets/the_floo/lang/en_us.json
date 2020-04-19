@@ -1,0 +1,8 @@
+{
+    "item.minecraft.potion.effect.the_floo": "Potion of the Floo",
+    "item.minecraft.splash_potion.effect.the_floo": "Splash Potion of the Floo",
+    "item.minecraft.lingering_potion.effect.the_floo": "Lingering Potion of the Floo",
+    "effect.the_floo.the_floo": "The Floo",
+	"effect.the_floo.immunity": "Immunity",
+	"item.the_floo.dead_bat": "Dead Bat"
+}

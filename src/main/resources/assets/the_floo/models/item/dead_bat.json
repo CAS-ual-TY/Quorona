@@ -1,6 +1,6 @@
 {
     "parent": "item/generated",
     "textures": {
-        "layer0": "quorona:item/dead_bat"
+        "layer0": "the_floo:item/dead_bat"
      }
 }

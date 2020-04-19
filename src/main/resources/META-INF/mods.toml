@@ -12,22 +12,22 @@ loaderVersion="[31,)" #mandatory This is typically bumped every Minecraft versio
 # A list of mods - how many allowed here is determined by the individual mod loader
 [[mods]] #mandatory
 # The modid of the mod
-modId="quorona" #mandatory
+modId="the_floo" #mandatory
 # The version number of the mod - there's a few well known ${} variables useable here or just hardcode it
 version="${file.jarVersion}" #mandatory
  # A display name for the mod
-displayName="Quorona" #mandatory
+displayName="The Floo" #mandatory
 # A URL to query for updates for this mod. See the JSON update specification <here>
 #updateJSONURL="http://myurl.me/" #optional
 # A URL for the "homepage" for this mod, displayed in the mod UI
 #displayURL="http://example.com/" #optional
 # A file name (in the root of the mod JAR) containing a logo for display
-#logoFile=quorona.png" #optional
+#logoFile=the_floo.png" #optional
 # A text field displayed in the mod UI
-credits="Mojang, Minecraft Forge Team and me (CAS_ual_TY)." #optional
+credits="Mojang, Minecraft Forge Team." #optional
 # A text field displayed in the mod UI
 authors="CAS_ual_TY" #optional
 # The description text for the mod (multi line!) (#mandatory)
 description='''
-Slay a bat, create a potion and give someone or yourself the nasty Quorona effect which slows down mining ever so slightly, but for a long time!
+Slay a bat, create a potion and give someone or yourself the nasty The Floo effect which decreases your maximum health ever so slightly, but for a long time!
 '''
