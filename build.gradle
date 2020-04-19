@@ -13,9 +13,9 @@ apply plugin: 'net.minecraftforge.gradle'
 apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
 
-version = '1.0'
-group = 'de.cas_ual_ty.quorona' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
-archivesBaseName = 'quorona'
+version = '1.1'
+group = 'de.cas_ual_ty.the_floo' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
+archivesBaseName = 'the_floo'
 
 sourceCompatibility = targetCompatibility = compileJava.sourceCompatibility = compileJava.targetCompatibility = '1.8' // Need this here so eclipse task generates correctly.
 
