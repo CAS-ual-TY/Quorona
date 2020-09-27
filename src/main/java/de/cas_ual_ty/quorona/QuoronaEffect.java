@@ -5,8 +5,8 @@ import java.util.List;
 
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.ai.attributes.AttributeModifier.Operation;
+import net.minecraft.entity.ai.attributes.Attributes;
 import net.minecraft.item.ItemStack;
 import net.minecraft.potion.Effect;
 import net.minecraft.potion.EffectInstance;
@@ -17,7 +17,7 @@ public class QuoronaEffect extends Effect
     public QuoronaEffect()
     {
         super(EffectType.HARMFUL, 0xB3E108);
-        this.addAttributesModifier(SharedMonsterAttributes.MAX_HEALTH, "A570C5AA-79A5-11EA-BC55-0242AC130003", -0.08D, Operation.MULTIPLY_TOTAL);
+        this.addAttributesModifier(Attributes.MAX_HEALTH, "A570C5AA-79A5-11EA-BC55-0242AC130003", -0.08D, Operation.MULTIPLY_TOTAL);
     }
     
     @Override
