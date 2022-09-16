@@ -47,9 +47,9 @@ public class Quorona
     
     private void livingSpawn(LivingSpawnEvent.SpecialSpawn event)
     {
-        if((event.getEntity().getType() == EntityType.WITCH) && !event.getWorld().isClientSide() && (event.getWorld().getRandom().nextInt(20) == 0))
+        if((event.getEntity().getType() == EntityType.WITCH) && !event.getLevel().isClientSide() && (event.getLevel().getRandom().nextInt(20) == 0))
         {
-            event.getEntityLiving().addEffect(createEffectInstance(QuoronaEffects.THE_FLOO.get(), Quorona.DEFAULT_THE_FLOO_TIME, true));
+            event.getEntity().addEffect(createEffectInstance(QuoronaEffects.THE_FLOO.get(), Quorona.DEFAULT_THE_FLOO_TIME, true));
         }
     }
     
