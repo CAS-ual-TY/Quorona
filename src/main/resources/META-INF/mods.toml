@@ -1,6 +1,6 @@
 modLoader="javafml"
-loaderVersion="[34,)"
-license="GNU General Public License v3.0"
+loaderVersion="[36,)"
+license="MIT License"
 issueTrackerURL="https://github.com/CAS-ual-TY/Quorona/issues"
 
 [[mods]]
@@ -11,4 +11,4 @@ issueTrackerURL="https://github.com/CAS-ual-TY/Quorona/issues"
     logoFile="logo.png"
     credits="Mojang and the Minecraft Forge Team."
     authors="CAS_ual_TY"
-    description="Highly infectious potion effect with mild symptoms. This mod was previously known as \"Quorona\" but Twitch (ex owners of Curseforge) forced me to change the name."
+    description="Highly infectious potion effect with mild symptoms. This mod was previously known as \"Quorona\"."

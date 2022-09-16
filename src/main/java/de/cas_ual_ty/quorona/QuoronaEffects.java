@@ -1,23 +1,20 @@
 package de.cas_ual_ty.quorona;
 
 import net.minecraft.potion.Effect;
-import net.minecraftforge.event.RegistryEvent;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
-import net.minecraftforge.fml.common.Mod.EventBusSubscriber.Bus;
-import net.minecraftforge.registries.ObjectHolder;
+import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.fml.RegistryObject;
+import net.minecraftforge.registries.DeferredRegister;
+import net.minecraftforge.registries.ForgeRegistries;
 
-@EventBusSubscriber(modid = Quorona.MOD_ID, bus = Bus.MOD)
-@ObjectHolder(Quorona.MOD_ID)
 public class QuoronaEffects
 {
-    public static final Effect THE_FLOO = null;
-    public static final Effect IMMUNITY = null;
+    private static final DeferredRegister<Effect> DEFERRED_REGISTER = DeferredRegister.create(ForgeRegistries.POTIONS, Quorona.MOD_ID);
     
-    @SubscribeEvent
-    public static void register(RegistryEvent.Register<Effect> event)
+    public static final RegistryObject<Effect> THE_FLOO = DEFERRED_REGISTER.register("the_floo", QuoronaEffect::new);
+    public static final RegistryObject<Effect> IMMUNITY = DEFERRED_REGISTER.register("immunity", ImmunityEffect::new);
+    
+    public static void register(IEventBus modBus)
     {
-        event.getRegistry().register(new QuoronaEffect().setRegistryName(Quorona.MOD_ID, "the_floo"));
-        event.getRegistry().register(new ImmunityEffect().setRegistryName(Quorona.MOD_ID, "immunity"));
+        DEFERRED_REGISTER.register(modBus);
     }
 }

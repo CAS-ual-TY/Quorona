@@ -3,6 +3,8 @@
     "item.minecraft.splash_potion.effect.the_floo": "Splash Potion of the Floo",
     "item.minecraft.lingering_potion.effect.the_floo": "Lingering Potion of the Floo",
     "effect.the_floo.the_floo": "The Floo",
-	"effect.the_floo.immunity": "Immunity",
+    "effect.the_floo.the_floo.description": "Reduces maximum health and spreads to other living beings nearby.",
+    "effect.the_floo.immunity": "Immunity",
+    "effect.the_floo.immunity.description": "Immunity against the Floo.",
 	"item.the_floo.dead_bat": "Dead Bat"
 }

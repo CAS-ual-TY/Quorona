@@ -1,8 +1,5 @@
 package de.cas_ual_ty.quorona;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.ai.attributes.AttributeModifier.Operation;
@@ -12,47 +9,50 @@ import net.minecraft.potion.Effect;
 import net.minecraft.potion.EffectInstance;
 import net.minecraft.potion.EffectType;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class QuoronaEffect extends Effect
 {
     public QuoronaEffect()
     {
         super(EffectType.HARMFUL, 0xB3E108);
-        this.addAttributesModifier(Attributes.MAX_HEALTH, "A570C5AA-79A5-11EA-BC55-0242AC130003", -0.08D, Operation.MULTIPLY_TOTAL);
+        addAttributeModifier(Attributes.MAX_HEALTH, "A570C5AA-79A5-11EA-BC55-0242AC130003", -0.1D, Operation.MULTIPLY_TOTAL);
     }
     
     @Override
-    public boolean isReady(int duration, int amplifier)
+    public boolean isDurationEffectTick(int duration, int amplifier)
     {
         return true;
     }
     
     @Override
-    public void performEffect(LivingEntity entityLivingBaseIn, int amplifier)
+    public void applyEffectTick(LivingEntity entityLivingBaseIn, int amplifier)
     {
-        if(entityLivingBaseIn.isPotionActive(QuoronaEffects.IMMUNITY))
+        if(entityLivingBaseIn.hasEffect(QuoronaEffects.IMMUNITY.get()))
         {
-            entityLivingBaseIn.removePotionEffect(this);
+            entityLivingBaseIn.removeEffect(this);
             return;
         }
         
         LivingEntity target;
-        for(Entity entity : entityLivingBaseIn.getEntityWorld().getEntitiesInAABBexcluding(entityLivingBaseIn, entityLivingBaseIn.getBoundingBox().grow(1.5D), (entity) -> true))
+        for(Entity entity : entityLivingBaseIn.level.getEntities(entityLivingBaseIn, entityLivingBaseIn.getBoundingBox().inflate(1.5D), (entity) -> true))
         {
             if(entity instanceof LivingEntity)
             {
-                target = (LivingEntity)entity;
+                target = (LivingEntity) entity;
                 
-                if(!target.isPotionActive(QuoronaEffects.IMMUNITY) && !target.isPotionActive(this) && !target.isEntityUndead())
+                if(!target.hasEffect(QuoronaEffects.IMMUNITY.get()) && !target.hasEffect(this) && !target.isInvertedHealAndHarm())
                 {
-                    target.addPotionEffect(new EffectInstance(this, Quorona.DEFAULT_THE_FLOO_TIME, 0, false, false));
+                    target.addEffect(new EffectInstance(this, Quorona.DEFAULT_THE_FLOO_TIME, 0, false, false));
                 }
             }
         }
         
-        EffectInstance ef = entityLivingBaseIn.getActivePotionEffect(this);
+        EffectInstance ef = entityLivingBaseIn.getEffect(this);
         if(ef != null && ef.getDuration() == 1)
         {
-            entityLivingBaseIn.addPotionEffect(new EffectInstance(QuoronaEffects.IMMUNITY, Quorona.DEFAULT_IMMUNITY_TIME, 0, false, false));
+            entityLivingBaseIn.addEffect(new EffectInstance(QuoronaEffects.IMMUNITY.get(), Quorona.DEFAULT_IMMUNITY_TIME, 0, false, false));
         }
     }
     
