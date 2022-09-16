@@ -1,11 +1,15 @@
 package de.cas_ual_ty.quorona;
 
-import net.minecraft.entity.EntityType;
-import net.minecraft.entity.merchant.villager.VillagerProfession;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.Items;
-import net.minecraft.item.MerchantOffer;
-import net.minecraft.potion.*;
+import net.minecraft.world.effect.MobEffect;
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.npc.VillagerProfession;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.item.alchemy.PotionBrewing;
+import net.minecraft.world.item.alchemy.PotionUtils;
+import net.minecraft.world.item.alchemy.Potions;
+import net.minecraft.world.item.trading.MerchantOffer;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.entity.living.LivingSpawnEvent;
 import net.minecraftforge.event.village.VillagerTradesEvent;
@@ -59,14 +63,14 @@ public class Quorona
         }
     }
     
-    public static EffectInstance createEffectInstance(Effect effect, int duration, boolean particles)
+    public static MobEffectInstance createEffectInstance(MobEffect effect, int duration, boolean particles)
     {
         return createEffectInstance(effect, duration, 0, particles);
     }
     
-    public static EffectInstance createEffectInstance(Effect effect, int duration, int amplifier, boolean particles)
+    public static MobEffectInstance createEffectInstance(MobEffect effect, int duration, int amplifier, boolean particles)
     {
-        EffectInstance ef = new EffectInstance(effect, duration, amplifier, false, particles);
+        MobEffectInstance ef = new MobEffectInstance(effect, duration, amplifier, false, particles);
         ef.setCurativeItems(new ArrayList<>());
         return ef;
     }

@@ -1,14 +1,14 @@
 package de.cas_ual_ty.quorona;
 
-import net.minecraft.potion.Potion;
+import net.minecraft.world.item.alchemy.Potion;
 import net.minecraftforge.eventbus.api.IEventBus;
-import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.registries.RegistryObject;
 
 public class QuoronaPotions
 {
-    private static final DeferredRegister<Potion> DEFERRED_REGISTER = DeferredRegister.create(ForgeRegistries.POTION_TYPES, Quorona.MOD_ID);
+    private static final DeferredRegister<Potion> DEFERRED_REGISTER = DeferredRegister.create(ForgeRegistries.POTIONS, Quorona.MOD_ID);
     
     public static final RegistryObject<Potion> THE_FLOO = DEFERRED_REGISTER.register("the_floo", () -> new Potion(Quorona.createEffectInstance(QuoronaEffects.THE_FLOO.get(), Quorona.DEFAULT_THE_FLOO_TIME, false)));
     public static final RegistryObject<Potion> LONG_THE_FLOO = DEFERRED_REGISTER.register("long_the_floo", () -> new Potion("the_floo", Quorona.createEffectInstance(QuoronaEffects.THE_FLOO.get(), Quorona.DEFAULT_THE_FLOO_TIME * 3 / 2, false)));

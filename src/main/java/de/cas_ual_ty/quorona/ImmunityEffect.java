@@ -1,17 +1,17 @@
 package de.cas_ual_ty.quorona;
 
-import net.minecraft.item.ItemStack;
-import net.minecraft.potion.Effect;
-import net.minecraft.potion.EffectType;
+import net.minecraft.world.effect.MobEffect;
+import net.minecraft.world.effect.MobEffectCategory;
+import net.minecraft.world.item.ItemStack;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class ImmunityEffect extends Effect
+public class ImmunityEffect extends MobEffect
 {
     public ImmunityEffect()
     {
-        super(EffectType.BENEFICIAL, 0x0000BB);
+        super(MobEffectCategory.BENEFICIAL, 0x0000BB);
     }
     
     @Override
