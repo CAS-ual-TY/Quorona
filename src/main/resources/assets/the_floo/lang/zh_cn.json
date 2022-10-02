@@ -1,0 +1,10 @@
+{
+    "item.minecraft.potion.effect.the_floo": "感染药水",
+    "item.minecraft.splash_potion.effect.the_floo": "喷溅型感染药水",
+    "item.minecraft.lingering_potion.effect.the_floo": "滞留型感染药水",
+    "effect.the_floo.the_floo": "感染",
+    "effect.the_floo.the_floo.description": "降低生命值并传染给附近生物。",
+    "effect.the_floo.immunity": "抗体",
+    "effect.the_floo.immunity.description": "免疫感染。",
+    "item.the_floo.dead_bat": "死蝙蝠"
+}
