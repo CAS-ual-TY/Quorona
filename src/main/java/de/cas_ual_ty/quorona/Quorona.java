@@ -11,7 +11,7 @@ import net.minecraft.world.item.alchemy.PotionUtils;
 import net.minecraft.world.item.alchemy.Potions;
 import net.minecraft.world.item.trading.MerchantOffer;
 import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.event.entity.living.LivingSpawnEvent;
+import net.minecraftforge.event.entity.living.MobSpawnEvent;
 import net.minecraftforge.event.village.VillagerTradesEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
@@ -45,7 +45,7 @@ public class Quorona
         PotionBrewing.addMix(Potions.AWKWARD, QuoronaItems.DEAD_BAT.get(), QuoronaPotions.THE_FLOO.get());
     }
     
-    private void livingSpawn(LivingSpawnEvent.SpecialSpawn event)
+    private void livingSpawn(MobSpawnEvent.FinalizeSpawn event)
     {
         if((event.getEntity().getType() == EntityType.WITCH) && !event.getLevel().isClientSide() && (event.getLevel().getRandom().nextInt(20) == 0))
         {
