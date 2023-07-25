@@ -5,7 +5,7 @@ import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.Item;
-import net.minecraftforge.event.CreativeModeTabEvent;
+import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -23,9 +23,9 @@ public class QuoronaItems
         modBus.addListener(QuoronaItems::creativeModeTabs);
     }
     
-    public static void creativeModeTabs(CreativeModeTabEvent.BuildContents event)
+    public static void creativeModeTabs(BuildCreativeModeTabContentsEvent event)
     {
-        if(event.getTab() == CreativeModeTabs.FOOD_AND_DRINKS)
+        if(event.getTabKey() == CreativeModeTabs.FOOD_AND_DRINKS)
         {
             event.accept(DEAD_BAT);
         }

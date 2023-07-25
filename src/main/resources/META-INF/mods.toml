@@ -1,14 +1,15 @@
 modLoader="javafml"
-loaderVersion="[45,)"
-license="MIT License"
+loaderVersion="${loader_version_range}"
+license="${mod_license}"
 issueTrackerURL="https://github.com/CAS-ual-TY/Quorona/issues"
 
 [[mods]]
-    modId="the_floo"
-    version="${file.jarVersion}"
-    displayName="The Floo"
+    modId="${mod_id}"
+    version="${mod_version}"
+    displayName="${mod_name}"
     displayURL="https://github.com/CAS-ual-TY/Quorona"
     logoFile="logo.png"
-    credits="Mojang and the Minecraft Forge Team."
-    authors="CAS_ual_TY"
-    description="Highly infectious potion effect with mild symptoms. This mod was previously known as \"Quorona\"."
+    credits="Mojang and the Minecraft Forge Team"
+    authors="${mod_authors}"
+    displayTest="MATCH_VERSION"
+    description='''${mod_description}'''

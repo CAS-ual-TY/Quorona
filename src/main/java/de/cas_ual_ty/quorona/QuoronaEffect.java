@@ -36,7 +36,7 @@ public class QuoronaEffect extends MobEffect
         }
         
         LivingEntity target;
-        for(Entity entity : entityLivingBaseIn.level.getEntities(entityLivingBaseIn, entityLivingBaseIn.getBoundingBox().inflate(1.5D), (entity) -> true))
+        for(Entity entity : entityLivingBaseIn.level().getEntities(entityLivingBaseIn, entityLivingBaseIn.getBoundingBox().inflate(1.5D), (entity) -> true))
         {
             if(entity instanceof LivingEntity)
             {
